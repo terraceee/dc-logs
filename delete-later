@@ -3,6 +3,7 @@ if getgenv().esp ~= nil then
 end
 
 local esp = {
+ settings = {
     enabled        = false;
     teamcheck      = false;
     displayname    = false;
@@ -20,7 +21,7 @@ local esp = {
     players        = {};
     connections    = {};
     infov          = {};
-    outline        = {true, Color3.new(0,0,0)};
+    outline        = true;
     box            = {false, Color3.new(1,1,1), 1};
     boxfill        = {false, Color3.new(1,.25,.25), .5};
     tracer         = {false, Color3.new(1,1,1), 1};
@@ -38,7 +39,7 @@ local esp = {
         ['Health']   = {Position = 'left', Enabled = false, Color1 = Color3.new(1,0,0), Color2 = Color3.new(0,1,0), Transparency = 0};
     };
 }
-
+}
 local players = game:GetService('Players');
 local localPlayer = players.LocalPlayer;
 local atan2, min, max, clamp, sin, cos, rad, floor, abs = math.atan2, math.min, math.max, math.clamp, math.sin, math.cos, math.rad, math.floor, math.abs;
