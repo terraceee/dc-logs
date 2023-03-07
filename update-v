@@ -3,7 +3,7 @@ if getgenv().esp ~= nil then
 end
 
 local esp = {
-    enabled        = true;
+    enabled        = false;
     teamcheck      = false;
     displayname    = false;
     limitdistance  = false;
@@ -21,7 +21,7 @@ local esp = {
     connections    = {};
     infov          = {};
     outline        = {true, Color3.new(0,0,0)};
-    box            = {true, Color3.new(1,0,0), 1};
+    box            = {false, Color3.new(1,0,0), 1};
     boxfill        = {false, Color3.new(1,.25,.25), .5};
     tracer         = {false, Color3.new(1,1,1), 1};
     snapline       = {false, Color3.new(1,1,1), 1, 1, 'Head'};
@@ -29,15 +29,15 @@ local esp = {
     arrow          = {false, Color3.new(1,1,1), 1};
     chams          = {false, Color = Color3.new(1,1,1), Color2 = Color3.new(1,1,1), 1, 1, true};
     textlayout     = {
-        -- NW --['Speed']     = {Position = 'left', Enabled = true, Suffix = ' STUDS/S', Color = Color3.new(1,1,1), Transparency = 0};
-        ['Visible']     = {Position = 'right', Enabled = true, Color = Color3.new(1,1,1), Transparency = 0};
-        ['Name']     = {Position = 'top', Enabled = true, Color = Color3.new(1,1,1), Transparency = 0};
-        ['Distance'] = {Position = 'right', Enabled = true, Default = 'NIL', Suffix = 'M', Color = Color3.new(1,1,1), Transparency = 0};
-        ['Tool']     = {Position = 'bottom', Enabled = true, Default = 'None', Color = Color3.new(1,1,1), Transparency = 0};
+        ['Speed']     = {Position = 'left', Enabled = false, Suffix = ' STUDS/S', Color = Color3.new(1,1,1), Transparency = 0};
+        ['Visible']     = {Position = 'right', Enabled = false, Color = Color3.new(1,1,1), Transparency = 0};
+        ['Name']     = {Position = 'top', Enabled = false, Color = Color3.new(1,1,1), Transparency = 0};
+        ['Distance'] = {Position = 'right', Enabled = false, Default = 'NIL', Suffix = 'M', Color = Color3.new(1,1,1), Transparency = 0};
+        ['Tool']     = {Position = 'bottom', Enabled = false, Default = 'None', Color = Color3.new(1,1,1), Transparency = 0};
         ['Health']   = {Position = 'left', Enabled = false, IgnoreTarget = true, Default = 'NaN', Color = Color3.new(1,1,1), Transparency = 0};
     };
     barlayout      = {
-        ['Health']   = {Position = 'left', Enabled = true, Color1 = Color3.new(1,0,0), Color2 = Color3.new(0,1,0), Transparency = 0};
+        ['Health']   = {Position = 'left', Enabled = false, Color1 = Color3.new(1,0,0), Color2 = Color3.new(0,1,0), Transparency = 0};
     };
 }
 
